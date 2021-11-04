@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/88484431/140250344-2a1ec725-3cc9-4676-b4c0-8720f3ea6773.png)
 
 ## Bài 1
-
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau1.png)
 ## Ý tưởng
 Với một tâm hồn ngây thơ trong sáng thì mình đã từng nghĩ: dùng vòng for là được chứ gì đâu :D cơ mà làm vậy thì tốn mất 10 lần nhân, như thế thì không kinh tế lắm :/ 
 
@@ -39,7 +39,7 @@ int main()
 ```
 
 ## Bài 2
-![image](https://user-images.githubusercontent.com/88484431/140286046-640c00f0-d209-41df-a242-26f1b49e8c85.png)
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau2.png)
 ## Ý tưởng
 Ta sẽ tìm cách tách từng chữ số của n ra rồi cộng lại với nhau, bằng cách chia lấy dư n cho 10. Sau khi chia, ta cần loại bỏ chữ số vừa sử dụng ra để tiếp tục tính toán, bằng cách lấy n chia nguyên cho 10.
 ## Lưu đồ
@@ -64,7 +64,7 @@ int main()
 }
 ```
 ## Bài 3
-![image](https://user-images.githubusercontent.com/88484431/140250826-90f9cafd-51e5-4da8-bd87-e2df19773733.png)
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau3.png)
 ## Ý tưởng
 Tạo một vòng lặp chạy từ 1 đến n, trên tử sẽ là x^i, dưới mẫu sẽ là tổng các số từ 1 đến i.
 ## Lưu đồ
@@ -102,7 +102,7 @@ int main()
 }
 ```
 ## Bài 4
-![image](https://user-images.githubusercontent.com/88484431/140286914-dd0f130a-c3bb-48c5-b7c2-0e4e993e4aa7.png)
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau4.png)
 ## Ý tưởng
 Tạo một vòng lặp chạy từ 1 đến n, mỗi bước lặp sẽ cộng thêm vào tổng ```((-1)^i) * x^(2*i))```
 ## Lưu đồ
@@ -133,7 +133,7 @@ int main()
 }
 ```
 ## Bài 5
-![image](https://user-images.githubusercontent.com/88484431/140299523-939f963c-5c91-40b5-b7fb-b8ea8a702bb8.png)
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau5.png)
 ## Ý tưởng
 Ta sẽ tính từ trong ra ngoài, từ cái nhỏ nhất trước. Với mỗi bước lặp, ta sẽ lấy căn bậc hai của tổng hiện tại, rồi cộng thêm số mới vào. Sau khi lặp xong, lấy căn của tổng có được và ta sẽ có kết quả.
 ## Lưu đồ
@@ -163,7 +163,7 @@ int main()
 }
 ```
 ## Bài 6
-![image](https://user-images.githubusercontent.com/88484431/140302973-f7996775-fc9b-42c4-84df-7f18e40f1594.png)
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau6.png)
 Qua tìm hiểu và được các anh giải thích thì mình có cách giải bài này như sau:
 • Tính tổng với độ chính xác 10^-6 nghĩa là số hạng nhỏ nhất trong dãy không bé hơn ```10^-6```. Vì vậy, ta khởi tạo một biến ```epsilon = 1```, là độ chính xác hiện tại của tổng
 • Dùng vòng lặp tính tổng ```1 + 1/2 + 1/3 + ... + 1/i +.... ```sau mỗi bước lặp, cập nhật lại ```epsilon = 1 / i```. Vòng lặp sẽ kết thúc khi epsilon < 10^-6.
@@ -191,7 +191,7 @@ int main()
 }
 ```
 ## Bài 7
-![image](https://user-images.githubusercontent.com/88484431/140304104-83759961-11cc-43f6-9465-cf957a292454.png)
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau7.png)
 ## Ý tưởng
 Đây là công thức truy hồi của dãy số. Dựa vào số liền trước trong dãy, ta có thể tính được số liền sau nó.
 
@@ -221,15 +221,102 @@ int main()
 }
 ```
 ## Bài 8
-![Uploading image.png…]()
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau8.png)
 ## Ý tưởng
 Well, nhìn vào bài này là mình thấy ngay rằng phải if else đến chet rồi :)))
 
 Tam giác có các loại: Tam giác thường, tam giác cân, tam giác vuông cân, tam giác vuông, tam giác đều (các trường hợp tam giác tù, tam giác nhọn khá phức tạp, mình không xét đến ở đây)
 
-Ta thấy rằng, việc xét các trường hợp
+Ta thấy rằng, nếu một tam giác là tam giác đều thì không thể là tam giác vuông và ngược lại. Vì thế, để đơn giản các bước xét hơn, ta sẽ bắt đầu xét từ trường hợp tam giác đều, rồi loại trừ dần các trường hợp khác.
+
+• Đầu tiên, ta so sánh 3 cạnh của tam giác. Nếu chúng bằng nhau thì đó là tam giác đều, ngược lại, ta sẽ tiếp tục xét;
+
+• Tiếp theo, kiểm tra xem 3 cạnh của tam giác có thỏa mãn hệ thức Pytago hay không
+
+  + Trường hợp thỏa mãn: tiếp tục kiểm tra xem có hai cạnh nào của tam giác bằng nhau không. Nếu có, tam giác đang xét là tam giác vuông cân, ngược lại, đó là tam giác vuông;
+    
+  + Trường hợp không thỏa mãn: lại tiếp tục kiểm tra xem có hai cạnh nào của tam giác bằng nhau không. Nếu có, tam giác đang xét là tam giác cân, ngược lại, đó là tam giác thường.
+
+## Lưu đồ
+
+## Code
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int x, y, z; 
+    cin >> x >> y >> z;
+    x *= x; y *= y; z *= z; //gon hon khi tinh toan he thuc pytago
+    int square = 0, equal3 = 0, equal2 = 0;
+    if(x == y && y == z) equal3 = 1;  //kiem tra 3 canh bang nhau
+    if(x == y || y == z || x == z) equal2 = 1;  //kiem tra 2 canh bang nhau
+    if(x == y + z || y == z + x || z == x + y) square = 1; //kiem tra he thuc pytago
+    if(equal3) cout << "Tam giac deu";
+    else 
+    {
+        if(square)      
+        {
+            if(equal2) cout << "Tam giac vuong can";
+            else cout << "Tam giac vuong";
+        }
+        else
+        {
+            if(equal2) cout << "Tam giac can";
+            else cout << "Tam giac thuong";
+        }
+    }
+    return 0;
+}
 ```
-• Đầu tiên, ta so sánh 3 cạnh của tam giác. Nếu chúng bằng nhau thì đó là tam giác đều, ngược lại, ta sẽ tiếp tục xét
-• Tiếp theo, kiểm tra xem 3 cạnh của tam giác có thỏa mãn hệ thức Pytago hay không. 
-    - Trường hợp thỏa mãn: tiếp tục kiểm tra xem có hai cạnh nào của tam giác bằng nhau không. Nếu có, tam giác đang xét là tam giác vuông cân, ngược lại, đó là tam giác vuông
-    - 
+Mình sử dụng 3 biến ```equal3```, ```equal2``` và ```square``` để làm phần if đơn giản hơn, thay vì so sánh trực tiếp trong câu lệnh.
+## Bài 9
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau9.png)
+## Ý tưởng
+Số chính phương là bình phương của một số nguyên. Vì vậy, nếu có một số nào đó bình phương lên mà bằng n thì n là số chính phương.
+
+Do đó, ta có thể kiểm tra bằng cách tạo một biến ```tmp = 1```, rồi kiểm tra xem ```tmp^2``` có lớn hơn hoặc bằng n hay không. Nếu không, ta tăng giá trị của ```tmp``` lên 1. Khi kết thúc vòng lặp, nếu ```tmp == n``` thì n là số chính phương.
+## Lưu đồ
+
+## Code
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, tmp = 1;
+    cin >> n;
+    while(tmp * tmp < n) tmp++;
+    if(tmp * tmp == n) cout << n << " la so chinh phuong";
+    else cout << n << " khong la so chinh phuong";
+    return 0;
+}
+```
+## Bài 10
+![image](https://github.com/hunger1607/writeupbanhoctap/blob/main/cau10.png)
+## Ý tưởng
+Tương tự như bài 9, ta cũng sẽ khởi tạo một biến ```tmp = 1```. Với mỗi lần lặp, ta kiểm tra xem ```tmp``` đã lớn hơn hoặc bằng n chưa, nếu chưa thì ```tmp *= 5```. Sau khi lặp xong, nếu ```tmp == n``` thì n thỏa mãn yêu cầu đề bài.
+## Lưu đồ
+
+## Code
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, tmp = 1;
+    cin >> n;
+    while(tmp < n) tmp *= 5;
+    if(tmp == n) cout << n << " thoa man";
+    else cout << n << " khong thoa man";
+    return 0;
+}
+```
+# KẾT
+Đây là writeup đầu tiên của mình, nên chắc chắn sẽ không thể không có thiếu sót. Mong các anh, chị trong ban và các bạn thông cảm :v Cảm ơn mọi người đã xem.
